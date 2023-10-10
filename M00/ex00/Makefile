@@ -1,10 +1,10 @@
-SRC			=	megaphone.cpp
-OBJ			=	$(SRC:.cpp=.o)
-CC			=	g++
-RM			=	rm -rf
-CPPFLAGS	=	-Wall -Wextra -Werror -std=c++98 -pedantic
+SRC			= megaphone.cpp
+OBJ			= $(SRC:.cpp=.o)
+CC			= c++
+RM			= rm -rf
+CPPFLAGS	= -Wall -Wextra -Werror -std=c++98 -pedantic
 
-NAME		=	megaphone
+NAME		= megaphone
 
 all:		$(NAME)
 
