@@ -6,7 +6,7 @@
 /*   By: hbalasan <hbalasan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 15:10:01 by hbalasan          #+#    #+#             */
-/*   Updated: 2023/10/10 15:54:11 by hbalasan         ###   ########.fr       */
+/*   Updated: 2023/10/11 02:15:53 by hbalasan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ class	Contact
 		std::string	get_lname(void)	const;
 		std::string	get_nick(void) const;
 		std::string	get_phone_num(void) const;
-		std::string	get_sectret(void) const;
+		std::string	get_secret(void) const;
 		void		set_fname(std::string str);
 		void		set_lname(std::string str);
 		void		set_nick(std::string str);

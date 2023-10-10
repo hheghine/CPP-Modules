@@ -1,5 +1,5 @@
-SRCS			= *.cpp
-HEADER			= *.hpp
+SRCS			= $(wildcard *.cpp)
+HEADER			= $(wildcard *.hpp)
 OBJ_DIR			= obj
 OBJS			= $(patsubst %.cpp, $(OBJ_DIR)/%.o, $(SRCS))
 CC				= c++
