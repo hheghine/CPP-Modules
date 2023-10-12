@@ -6,7 +6,7 @@
 /*   By: hbalasan <hbalasan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 14:00:14 by hbalasan          #+#    #+#             */
-/*   Updated: 2023/10/10 14:00:15 by hbalasan         ###   ########.fr       */
+/*   Updated: 2023/10/13 03:57:21 by hbalasan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	main(int argc, char **argv)
 	int	i, j;
 
 	if (argc < 2)
-		std::cout << "*** LOUD NOISE ***";
+		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
 
 	i = 0;
 	while (argc > 1 && argv[++i])
