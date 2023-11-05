@@ -5,17 +5,17 @@
 #                                                     +:+ +:+         +:+      #
 #    By: hbalasan <hbalasan@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/11/05 21:15:39 by hbalasan          #+#    #+#              #
-#    Updated: 2023/11/05 23:27:17 by hbalasan         ###   ########.fr        #
+#    Created: 2023/11/05 20:42:38 by hbalasan          #+#    #+#              #
+#    Updated: 2023/11/05 20:48:11 by hbalasan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= violence
+NAME		= hi
 
-SRC			= main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
+SRC			= main.cpp
 OBJ			= $(SRC:.cpp=.o)
 CC			= g++
-CPPFLAGS	= -Wall -Wextra -Werror -pedantic -fsanitize=address -g #-std=c++98
+CPPFLAGS	= -Wall -Wextra -Werror -pedantic #-std=c++98
 
 RM			= rm -rf
 
