@@ -251,3 +251,51 @@ Zombie object Zomb destroyed
 Zombie object Zomb destroyed
 ```
 </details>
+
+## Exercise 02: HI THIS IS BRAIN
+
+The goal of this exercise is to demystify references. Although there are some little differences, this is another syntax for address manipulation.
+
+<details>
+<summary><i>HI THIS IS BRAIN</i></summary>
+  
+```
+$>./hi
+
+Memory address of the string: 0x7ffd5d33a6d0
+Memory address held by stringPTR: 0x7ffd5d33a6d0
+Memory address held by stringREF: 0x7ffd5d33a6d0
+Value of the string: HI THIS IS BRAIN
+Value pointed to by stringPTR: HI THIS IS BRAIN
+Value pointed to by stringREF: HI THIS IS BRAIN
+```
+</details>
+
+## Exercise 03: Unnecessary violence
+
+Implement a Weapon class.<br>
+Create two classes: **HumanA** and **HumanB**. They both have a Weapon and a name.
+
+```
+<name> attacks with their <weapon type>
+```
+HumanA and HumanB are almost the same except for these two tiny details:
+- While HumanA takes the Weapon in its constructor, HumanB doesn’t.
+- HumanB may not always have a Weapon, whereas HumanA will always be armed.
+
+<details>
+<summary><i>Unnecessary violence</i></summary>
+  
+```
+$>./violence
+
+HumanA Bob created with crude spiked club
+Bob attacks with his crude spiked club
+Bob attacks with his some other type of club
+HumanA Bob destroyed
+HumanB Jim created with no weapon
+Jim attacks with his crude spiked club
+Jim attacks with his some other type of club
+HumanB Jim destroyed
+```
+</details>
