@@ -35,13 +35,15 @@ This modules are an introduction to Object-Oriented Programming.
 
 ```
 - [Module 00](#module-00) ― Namespaces, classes, member functions, stdio streams, initialization lists, static, const, and some other basic stuff
-- Module 01 ― Memory allocation, pointers to members, references, switch statement
+- [Module 01](#module-01) ― Memory allocation, pointers to members, references, switch statement
 - Module 02 ― Ad-hoc polymorphism, operator overloading and Orthodox Canonical class form
 - Module 03 ― Inheritance
 - Module 04 ― Subtype polymorphism, abstract classes, interfaces
 
-## Module 00
 ---
+
+## Module 00
+
 ### Exercise 00: Megaphone
 
 Just to make sure that everybody is awake, in a C++ manner. The program should behaves as follows:
@@ -60,7 +62,6 @@ $>
 ```
 </details>
 
----
 ### Exercise 01: My Awesome PhoneBook
 
 Welcome to the 80s and their unbelievable technology! This is a program that behaves
@@ -95,7 +96,6 @@ _____________________________________________
 ```
 </details>
 
----
 ### Excercise 02: The Job Of Your Dreams
 
 Something went wrong and a source file was deleted by mistake. Your first task is to recreate a lost file.
@@ -176,3 +176,78 @@ class was implemented.
 </details>
 
 ---
+## Module 01
+
+### Exercise 00: BraiiiiiiinnnzzzZ
+
+First, implement a Zombie class. It has a string private attribute name.
+Add a member function void announce( void ); to the Zombie class. Zombies
+announce themselves as follows:
+```
+<name>: BraiiiiiiinnnzzzZ...
+```
+Then, implement the two following functions:
+```
+Zombie* newZombie( std::string name ); // It creates a zombie, name it, and return it.
+void randomChump( std::string name ); // It creates a zombie, name it, and the zombie announces itself.
+```
+
+Now, what is the actual point of the exercise? You have to determine in what case
+it’s better to allocate the zombies on the stack or heap.
+
+Zombies must be destroyed when you don’t need them anymore. The destructor must
+print a message with the name of the zombie for debugging purposes.
+
+<details>
+<summary><i>BraiiiiiiinnnzzzZ</i></summary>
+  
+```
+$>./zombie
+
+Zombie object Albert created.
+Albert: BraiiiiiiinnnzzzZ...
+Zombie object Adolf created.
+Adolf: BraiiiiiiinnnzzzZ...
+Zombie object Adolf destroyed.
+Zombie object Albert destroyed.
+```
+</details>
+
+### Exercise 01: Moar brainz!
+
+Time to create a horde of Zombies!<br>
+Implement the following function in the appropriate file:
+```
+Zombie* zombieHorde( int N, std::string name ); // It must allocate N Zombie objects in a single allocation.
+```
+Don’t forget to delete all the zombies and **check for memory leaks**.
+
+<details>
+<summary><i>Moar brainz!</i></summary>
+  
+```
+$>./zombie
+
+Zombie object (null) created
+Zombie object (null) created
+Zombie object (null) created
+Zombie object (null) created
+Zombie object (null) created
+Zombie object (null) created
+Zombie object (null) created
+Zomb BraiiiiiiinnnzzzZ...
+Zomb BraiiiiiiinnnzzzZ...
+Zomb BraiiiiiiinnnzzzZ...
+Zomb BraiiiiiiinnnzzzZ...
+Zomb BraiiiiiiinnnzzzZ...
+Zomb BraiiiiiiinnnzzzZ...
+Zomb BraiiiiiiinnnzzzZ...
+Zombie object Zomb destroyed
+Zombie object Zomb destroyed
+Zombie object Zomb destroyed
+Zombie object Zomb destroyed
+Zombie object Zomb destroyed
+Zombie object Zomb destroyed
+Zombie object Zomb destroyed
+```
+</details>
