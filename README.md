@@ -299,3 +299,28 @@ Jim attacks with his some other type of club
 HumanB Jim destroyed
 ```
 </details>
+
+## Exercise 04: Sed is for losers
+
+Create a program that takes three parameters in the following order: a filename and
+two strings, s1 and s2.
+It will open the file <filename> and copies its content into a new file
+<filename>.replace, replacing every occurrence of s1 with s2.
+
+Forbidden functions : `std::string::replace`
+
+<details>
+<summary><i>Sed is for losers</i></summary>
+  
+```
+$ ./replace 
+⚠ usage: replace <file> <old_str> <new_str>
+$ ./replace hello you traveler
+⚠ Error: hello: no such file or directory
+$ cat test.txt
+Sed is for losers. Sed is powerful. Sed is versatile
+$ ./replace test.txt "Sed" "AWK"
+$ cat test.txt.new 
+AWK is for losers. AWK is powerful. AWK is versatile.
+```
+</details>
