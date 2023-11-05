@@ -5,19 +5,17 @@
 #                                                     +:+ +:+         +:+      #
 #    By: hbalasan <hbalasan@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/11/05 21:15:39 by hbalasan          #+#    #+#              #
-#    Updated: 2023/11/06 00:44:43 by hbalasan         ###   ########.fr        #
+#    Created: 2023/11/06 00:37:06 by hbalasan          #+#    #+#              #
+#    Updated: 2023/11/06 00:45:00 by hbalasan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= violence
+NAME		= replace
 
-SRC			= main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
+SRC			= main.cpp
 OBJ			= $(SRC:.cpp=.o)
 CC			= g++
-CPPFLAGS	= -Wall -Wextra -Werror -pedantic -fsanitize=address -g #-std=c++98
-
-RM			= rm -rf
+CPPFLAGS	= -Wall -Wextra -Werror -pedantic #-std=c++98
 
 PRINTF		= printf
 
@@ -27,17 +25,17 @@ RESET		:= \033[0m
 
 all:		$(NAME)
 
-$(NAME):	$(OBJ)
+$(NAME):	$(OBJ) Makefile
 			@$(CC) $(CPPFLAGS) $(OBJ) -o $(NAME)
-			@$(PRINTF) "\r%100s\r$(PINK)☽ $(PURPLE)ex03 $(PINK)successfully compiled! $(RESET)\n"
+			@$(PRINTF) "\r%100s\r$(PINK)☽ $(PURPLE)ex04 $(PINK)successfully compiled! $(RESET)\n"
 
 clean:
 			$(RM) $(OBJ)
-
+			
 fclean:		clean
 			$(RM) $(NAME)
-			@$(PRINTF) "\r%100s\r$(PINK)☽ $(PURPLE)ex03 $(PINK)successfully cleaned! $(RESET)\n"
-
+			@$(PRINTF) "\r%100s\r$(PINK)☽ $(PURPLE)ex04 $(PINK)successfully cleaned! $(RESET)\n"
+			
 re:			fclean $(NAME)
 
 .PHONY:		all clean fclean re
