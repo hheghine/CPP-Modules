@@ -324,3 +324,47 @@ $ cat test.txt.new
 AWK is for losers. AWK is powerful. AWK is versatile.
 ```
 </details>
+
+## Exercise 05: Harl 2.0
+
+The goal of this exercise is to use pointers to member functions.
+
+Do you know Harl? We all do, do we? In case you don’t, find below the kind of
+comments Harl makes. They are classified by levels:
+
+- "DEBUG" level: Debug messages contain contextual information. They are mostly
+used for problem diagnosis.
+Example: "I love having extra bacon for my 7XL-double-cheese-triple-pickle-specialketchup burger. I really do!"
+- "INFO" level: These messages contain extensive information. They are helpful for
+tracing program execution in a production environment.
+Example: "I cannot believe adding extra bacon costs more money. You didn’t put
+enough bacon in my burger! If you did, I wouldn’t be asking for more!"
+- "WARNING" level: Warning messages indicate a potential issue in the system.
+However, it can be handled or ignored.
+Example: "I think I deserve to have some extra bacon for free. I’ve been coming for
+years whereas you started working here since last month."
+- "ERROR" level: These messages indicate an unrecoverable error has occurred.
+This is usually a critical issue that requires manual intervention.
+Example: "This is unacceptable! I want to speak to the manager now."
+
+## Exercise 06: Harl filter
+
+Sometimes you don’t want to pay attention to everything Harl says. Implement a
+system to filter what Harl says depending on the log levels you want to listen to.<br>
+Create a program that takes as parameter one of the four levels. It will display all
+messages from this level and above. For example:
+
+<details>
+<summary><i>Harl filter</i></summary>
+  
+```
+$> ./harlFilter "WARNING"
+[ WARNING ]
+I think I deserve to have some extra bacon for free.
+I've been coming for years whereas you started working here since last month.
+[ ERROR ]
+This is unacceptable, I want to speak to the manager now.
+$> ./harlFilter "I am not sure how tired I am today..."
+[ Probably complaining about insignificant problems ]
+```
+</details>
